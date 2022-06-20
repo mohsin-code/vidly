@@ -4,11 +4,12 @@ import Input from './common/input';
 class LoginForm extends Component {
     state = {
         account: { username: '', password: '' }
+        
     }
 
     handleSubmit = e => {
         e.preventDefault();
-        log
+        console.log("Submitted");
     };
 
     handleChange = ({currentTarget: input}) => {
