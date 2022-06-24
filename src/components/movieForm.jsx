@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Form from './common/form';
 
-const MovieForm = ({match, history}) => {
-    return ( 
-        <div>
-            <h1 className="m-2">Movie Form {match.params.id}</h1>
-            <button className="btn btn-primary m-2" onClick={() => history.push('/movies')}>Save</button>
-        </div>
-    );
+class MovieForm extends Form {
+    render() { 
+        const {match, history} = this.props;
+        return ( 
+            <div>
+                <h1 className="m-2">Movie Form {match.params.id}</h1>
+                <form>
+                    {this.renderInput("username", "Username")}
+                    {this.renderInput("password", "Password", "password")}
+                    {this.renderInput("name", "Name")}
+                </form>
+                <button className="btn btn-primary m-2" onClick={() => history.push('/movies')}>Save</button>
+            </div>
+        );
+    }
 }
  
 export default MovieForm;
