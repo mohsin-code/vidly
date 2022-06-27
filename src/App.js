@@ -1,10 +1,10 @@
-import Movies from './components/movies';
-import Rentals from './components/rentals';
-import Customers from './components/customers';
 import './App.css';
 import Navbar from './components/navbar';
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
+import Movies from './components/movies';
+import Rentals from './components/rentals';
+import Customers from './components/customers';
 import NotFound from './components/notFound';
 import MovieForm from './components/movieForm';
 import LoginForm from './components/loginForm';
